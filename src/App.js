@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import SideMenu from "./Components/SideMenu/sideMenu";
+import './App.scss';
 
-function App() {
+const App = () => {
+  const [SideFlag, setSideFlag] = useState(false)
+  console.log(SideFlag)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        SideFlag ? <SideMenu flag={SideFlag}/> : <SideMenu flag={SideFlag}/> 
+      }
+      <button onClick={() => setSideFlag(!SideFlag)}>click meee</button>
     </div>
-  );
+  );  
 }
 
 export default App;
