@@ -7,27 +7,27 @@ import styled from 'styled-components'
 const SideMenu = (props) => {
 	console.log(props);
 	const MaincontainerStyle = styled.div`
+		display: flex;
 		animation-name: sideMenu;
 		width: 30%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    background-color: blue;
-    position: relative;
-    animation-duration: .8s;
-    
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		background-color: blue;
+		position: relative;
+		animation-duration: 1s;
 	`;
 
 
 	const MaincontainerStyleExit = styled.div`
 		width: 30%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    background-color: blue;
-    position: relative;
-    animation-duration: .8s;	
+		display; flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		background-color: blue;
+		position: relative;
+		animation-duration: 1s;	
 		animation-name: sideMenuExit;
+		animation-fill-mode: forwards;
 	`;
 
 	const SideContainer = styled.div`
@@ -49,7 +49,7 @@ const SideMenu = (props) => {
 		justify-content: center;
 	`
 
-	const Profileimage = styled.div`
+	const Profileimage = styled.img`
 		width: 30%;
 		border-radius: 50%;
 	`
@@ -62,8 +62,7 @@ const SideMenu = (props) => {
 					<SideContainer>
 					<Container>
 						<ItemContainer>
-							<Profileimage>
-								<img  src={foto} alt=""/>
+							<Profileimage src={foto} alt="">
 							</Profileimage>
 						</ItemContainer>
 						<ItemContainer>Lorem .</ItemContainer>
@@ -83,8 +82,7 @@ const SideMenu = (props) => {
 					<SideContainer>
 					<Container>
 						<ItemContainer>
-							<Profileimage>
-								<img  src={foto} alt=""/>
+							<Profileimage src={foto} alt="">
 							</Profileimage>
 						</ItemContainer>
 						<ItemContainer>Lorem .</ItemContainer>

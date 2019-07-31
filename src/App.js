@@ -7,9 +7,9 @@ const App = () => {
   console.log(SideFlag)
 
   return (
-    <div>
+    <div className='Main'>
       {
-        SideFlag ? <SideMenu flag={SideFlag}/> : <SideMenu flag={SideFlag}/> 
+        !SideFlag ? <SideMenu flag={SideFlag}/> : <SideMenu flag={SideFlag}/> 
       }
       <button onClick={() => setSideFlag(!SideFlag)}>click meee</button>
     </div>
